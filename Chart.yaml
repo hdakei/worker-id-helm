@@ -1,0 +1,8 @@
+apiVersion: v2
+name: workerid-frontend
+description: Helm chart for workerid frontend with HPA
+version: 1.0.1
+dependencies: []
+maintainers:
+  - Name: Hazhir 
+    Email: hdakei@gmail.com
