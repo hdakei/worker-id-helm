@@ -27,6 +27,14 @@ spec:
             port: 80
           initialDelaySeconds: 30
           periodSeconds: 10
+        readinessProbe:
+          exec: # Use 'exec' for database check
+            command:
+              - "sh"
+              - "-c"
+              - "python check_db_connection.py" # 
+          initialDelaySeconds: 30
+          periodSeconds: 10
         resources:
           limits:
             cpu: 1.m
