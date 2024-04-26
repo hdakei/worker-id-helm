@@ -17,13 +17,13 @@ spec:
         image: chinooth/workerid-frontend:latest
         livenessProbe:
           httpGet:
-            path: /
+            path: /health # I didn't use backend to create healthck, for real project developer should add endpoint to check health check
             port: 80
           initialDelaySeconds: 120
           periodSeconds: 30
         readinessProbe:
           httpGet:
-            path: /
+            path: /ready  # I didn't use backend to create readiness check, for real project developer should add endpoint to check readiness check
             port: 80
           initialDelaySeconds: 30
           periodSeconds: 10
@@ -32,7 +32,7 @@ spec:
             command:
               - "sh"
               - "-c"
-              - "python check_db_connection.py" # 
+              - "python check_db_connection.py" # I assumed that database is mysql and I write this file and added to the project
           initialDelaySeconds: 30
           periodSeconds: 10
         resources:
