@@ -4,6 +4,8 @@
 ## Description
 This Helm chart deploys the "workerid-frontend" application,includes configurations for CPU horizontal pod autoscaling.
 
+## Source code
+Source code of the project is [workerid-frontend](https://github.com/hdakei/workerid-frontend ).
 ## Chart Details
 - **Chart Name:** workerid-frontend
 - **Chart Version:** 1.0.1
